@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light </h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+        
+    </section>
+    <div class="sec" id="sec">
+        <h2>Bhumika's Parallax  </h2>
+        <p>Hello everyone, My name is Bhumika ,i'm a student of CS engineering 2nd year, from MRIIRS,Faridabad. I've tried to make a landing page using parallax scroll effect. In this way i had completed the assigned task of making a landing page in the internship offered by codsoft. As a part of my summer internship i had designed this landing page. It was really fun going through this process of making a webpage with parallax scrolling effects.
+            <br><br>Working on a website requires some crucial skills like patience , creativity, innovation , zeal for web development and most importantly the time you devoted for increasing your skill. it completely depends on you what level you achieve after pursuing a certain  course like web development. Just put your best in whatever you do.
+
+            <br><br> I am really grateful that it helped me imcrease my skills in the domain of front-end web development.It was a wonderful experience to be able to design a webpage with so much CSS , designing, animations , transitions ,effects ,  and the proper knowledge of the domain. Hence , i conclude that anything is possible when you try to do that . You justt have to make a step ahead and god opens the complete path for you.
+            Thankyou for reading till here.&#x2728;
+        </p>
+    </div>
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById('moon');
+        let mountains_behind=document.getElementById('mountains_behind');
+        let text=document.getElementById('text');
+        let btn=document.getElementById('btn');
+        let mountains_front=document.getElementById('mountains_front');
+        let header=document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value=window.scrollY;
+            stars.style.left=value*0.25+'px';
+            moon.style.top=value*1.05+'px';
+            mountains_behind.style.top=value*0.5+'px';
+            mountains_front.style.top=value*0+'px';
+            text.style.marginRight=value*4+'px';
+            text.style.marginTop=value*1.5+'px';
+            btn.style.marginTop=value*1.5+'px';
+            header.style.top=value*0.5+'px';
+
+
+
+
+
+
+        })
+    </script>
+    
+</body>
+</html>
